@@ -1,5 +1,8 @@
+# App-specific data and notes
 *notes.txt
-
+test_data/
+tokenizers/
+*.xlsx
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
