@@ -31,7 +31,7 @@ class TRM():
         
 
         # SpaCy
-        self.nlp = spacy.load("en_core_web_lg")
+        self.nlp = spacy.load("en_core_web_sm")
 
 
     def read_normalized(self, file):
@@ -111,12 +111,12 @@ class TRM():
 
         for x in self.input_names_versions:
             results = []
-            input_name = x[0]
+            input_name = x
             for y in self.normalized_names_versions:
-                norm_name = y[0]
+                norm_name = y
                 syns1 = wordnet.synsets(input_name)
                 syns2 = wordnet.synsets(norm_name)
-                norm_name_tokens = self.nlp(norm_name)
+                #norm_name_tokens = self.nlp(norm_name)
                 print(f'input: {syns1}, norm: {syns2}')
                 d = syns1.wup_similarity(syns2)
                 result = [input_name, norm_name, d]
