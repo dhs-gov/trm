@@ -1,7 +1,6 @@
 pandas
+cleanco
 transformers
 sentence-transformers
-openpyxl
-#gensim - Doesn't work
 spacy
 nltk
